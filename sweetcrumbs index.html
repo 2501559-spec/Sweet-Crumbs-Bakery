@@ -128,11 +128,12 @@
             padding: 0 20px;
         }
         .section-title {
-            text-align: center;
+            text-align: left;
             font-family: "Georgia", serif;
-            color: #ffc0cb;
+            color: #FF0000;
             font-size: 28px;
             margin-bottom: 25px;
+            font-weight: bold;
         }
 
         /* Stats & About Us Table */
@@ -229,32 +230,149 @@
             font-weight: bold;
         }
 
-        /* Virtual Showcase */
-        .showcase-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .showcase-item {
-            background-color: #111111;
-            border: 1px solid #FF0000;
-            padding: 30px 20px;
-            width: 250px;
+        /* NEW Gallery Table */
+        .gallery-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #555555;
             text-align: center;
         }
-        .showcase-icon {
-            font-size: 40px;
-            color: #ffc0cb;
-            margin-bottom: 10px;
-        }
-        .showcase-name {
+        .gallery-table td {
+            border: 1px solid #555555;
+            padding: 30px 15px;
             color: #FF0000;
-            font-weight: bold;
+            font-size: 14px;
+            width: 33.33%;
         }
 
-        /* Simple spacer rule matching your original HR vibe */
+        /* NEW Customer Testimonials Table */
+        .testimonials-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #555555;
+        }
+        .testimonials-table td {
+            border: 1px solid #555555;
+            padding: 20px;
+            vertical-align: top;
+            width: 33.33%;
+        }
+        .testimonial-name {
+            color: #FF0000;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .testimonial-stars {
+            color: #FF0000;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .testimonial-text {
+            color: #FF0000;
+            font-style: italic;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* NEW Contact Form */
+        .form-container {
+            border: 1px solid #555555;
+            padding: 25px;
+            background-color: #000000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            color: #FF0000;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            max-width: 350px;
+            padding: 8px;
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            color: #000000;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            max-width: 350px;
+            height: 100px;
+        }
+        .form-buttons button {
+            background-color: #E0E0E0;
+            color: #000000;
+            border: 1px solid #999999;
+            padding: 5px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        /* NEW Our Location Box */
+        .location-container {
+            border: 1px solid #555555;
+            padding: 25px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .location-title {
+            color: #FF0000;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* NEW 4-Column Footer Table */
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #555555;
+            background-color: #000000;
+            margin-top: 40px;
+        }
+        .footer-table td {
+            border: 1px solid #555555;
+            padding: 20px;
+            vertical-align: top;
+            width: 25%;
+        }
+        .footer-heading {
+            color: #ffc0cb;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        .footer-hours-text {
+            font-size: 13px;
+            color: #FF0000;
+            margin-bottom: 10px;
+        }
+
+        /* Copyright bar */
+        .copyright-bar {
+            text-align: center;
+            padding: 25px 20px;
+            color: #FFFFFF;
+            font-size: 12px;
+            background-color: #000000;
+        }
+
+        /* Simple divider matching your HR theme */
         hr {
             border: 0;
             border-top: 1px solid #FF0000;
@@ -264,25 +382,29 @@
 </head>
 <body>
 
+    <!-- 1. Top Utility Contact Bar -->
     <div class="top-bar">
         <span>📍 Nairobi, Kenya | 📞 +254 799 993 666</span>
         <span>🕒 Mon - Sat: 7:00 AM - 7:00 PM | Sun: 8:00 AM - 4:00 PM</span>
     </div>
 
+    <!-- 2. Logo Branding Header -->
     <div class="header">
         <h1>SWEET CRUMBS BAKERY</h1>
         <p>Freshly baked goodness, served with warmth.</p>
     </div>
 
+    <!-- 3. Navigation Menu -->
     <div class="navbar">
         <a href="#about">Home</a>
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#specials">Specials</a>
-        <a href="#showcase">Gallery</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </div>
 
+    <!-- 4. Hero Banner -->
     <div class="hero">
         <h2>Welcome to Sweet Crumbs Bakery</h2>
         <p>Experience the finest artisan delights in Nairobi. We source premium local ingredients to craft golden croissants, melt-in-your-mouth pastries, and custom cakes that turn moments into memories.</p>
@@ -292,10 +414,12 @@
         </div>
     </div>
 
+    <!-- 5. Promo Bar -->
     <div class="promo-banner">
         🎉 PROMO: Use code SWEET10 and get 10% off all pastry orders this week! 🧁
     </div>
 
+    <!-- 6. About Us / Our Story Section -->
     <div class="section-container" id="about">
         <h2 class="section-title">Our Story &amp; Mission</h2>
         
@@ -309,6 +433,7 @@
             We believe baking is an art, not a factory process. That is why we never use artificial preservatives, and we source our flour, eggs, and dairy from certified local farms within 100km of Nairobi.
         </p>
 
+        <!-- Stats Block -->
         <table class="stats-table">
             <tr>
                 <td>
@@ -333,6 +458,7 @@
 
     <hr>
 
+    <!-- 7. The Bakery Menu Table -->
     <div class="section-container" id="menu">
         <h2 class="section-title">The Bakery Menu</h2>
         <table class="menu-table">
@@ -399,6 +525,7 @@
 
     <hr>
 
+    <!-- 8. Weekly Mid-Day Specials -->
     <div class="section-container" id="specials">
         <h2 class="section-title">Weekly Mid-Day Specials</h2>
         <div class="specials-grid">
@@ -425,26 +552,156 @@
 
     <hr>
 
-    <div class="section-container" id="showcase">
-        <h2 class="section-title">Our Virtual Showcase</h2>
-        <div class="showcase-grid">
-            <div class="showcase-item">
-                <div class="showcase-icon">🥐</div>
-                <div class="showcase-name">Artisan Croissant</div>
-            </div>
-            <div class="showcase-item">
-                <div class="showcase-icon">🍞</div>
-                <div class="showcase-name">Sourdough Loaf</div>
-            </div>
-            <div class="showcase-item">
-                <div class="showcase-icon">🍩</div>
-                <div class="showcase-name">Glazed Donuts</div>
-            </div>
+    <!-- 9. Gallery Section (2x3 Table) -->
+    <div class="section-container" id="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <table class="gallery-table">
+            <tr>
+                <td>Croissant</td>
+                <td>Bread</td>
+                <td>Cupcake</td>
+            </tr>
+            <tr>
+                <td>Donut</td>
+                <td>Cookie</td>
+                <td>Cake</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 10. Customer Testimonials Section -->
+    <div class="section-container">
+        <h2 class="section-title">Customer Testimonials</h2>
+        <table class="testimonials-table">
+            <tr>
+                <td>
+                    <div class="testimonial-name">Mary Wanjiku</div>
+                    <div class="testimonial-stars">★★★</div>
+                    <div class="testimonial-text">"The cakes are always fresh and delicious. This is my favourite bakery in Nairobi."</div>
+                </td>
+                <td>
+                    <div class="testimonial-name">James Otieno</div>
+                    <div class="testimonial-stars">★★★★</div>
+                    <div class="testimonial-text">"The bread tastes amazing and the customer service is excellent."</div>
+                </td>
+                <td>
+                    <div class="testimonial-name">Faith Njeri</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"I order birthday cakes here every year. They never disappoint."</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 11. Contact Us Section -->
+    <div class="section-container" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="inquiry">Inquiry Type</label>
+                    <select id="inquiry" name="inquiry">
+                        <option>General Inquiry</option>
+                        <option>Custom Cake Order</option>
+                        <option>Catering Request</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
         </div>
     </div>
 
-    <div style="text-align: center; padding: 40px 20px; color: #ffc0cb; background-color: #111111; border-top: 1px solid #FF0000; font-size: 14px;">
-        © 2026 Sweet Crumbs Bakery Nairobi. Built with artisan care.
+    <hr>
+
+    <!-- 12. Our Location Section -->
+    <div class="section-container">
+        <h2 class="section-title">Our Location</h2>
+        <div class="location-container">
+            <div class="location-title">Sweet Crumbs Bakery</div>
+            <p style="margin: 0 0 15px 0;">Moi Avenue<br>Nairobi, Kenya</p>
+            <div class="location-title">Directions:</div>
+            <p style="margin: 0 0 15px 0;">We are located along Moi Avenue near the Nairobi Central Business District.</p>
+            <a href="#">View on Google Maps</a>
+        </div>
+    </div>
+
+    <!-- 13. 4-Column Footer -->
+    <div class="section-container">
+        <table class="footer-table">
+            <tr>
+                <td>
+                    <div class="footer-heading">Quick Links</div>
+                    <ul class="footer-links">
+                        <li><a href="#about">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#specials">Specials</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="footer-heading">Popular Products</div>
+                    <ul class="footer-links" style="color: #FF0000; font-size: 13px;">
+                        <li>Croissant</li>
+                        <li>Chocolate Cake</li>
+                        <li>Cookies</li>
+                        <li>Fruit Tart</li>
+                        <li>Donuts</li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="footer-heading">Business Hours</div>
+                    <div class="footer-hours-text">
+                        <b>Monday - Friday</b><br>
+                        7:00 AM - 10:00 PM
+                    </div>
+                    <div class="footer-hours-text">
+                        <b>Saturday</b><br>
+                        9:00 AM - 6:00 PM
+                    </div>
+                    <div class="footer-hours-text">
+                        <b>Sunday</b><br>
+                        Closed
+                    </div>
+                </td>
+                <td>
+                    <div class="footer-heading">Policies</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 14. Copyright Bar -->
+    <div class="copyright-bar">
+        2026 Sweet Crumbs Bakery. All Rights Reserved.
     </div>
 
 </body>
